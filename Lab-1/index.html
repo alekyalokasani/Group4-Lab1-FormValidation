@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Form Validation</title>
+      <link rel="stylesheet" href="style.css">
+  
+    </head>
+<body>
+    <div class="wrapper">
+        <div class="title"> Validation Form</div>
+        <!-- Form -->
+       <form name='registration' onSubmit="return formValidation();">
+          <!-- Full Name -->
+          <div class="form">
+            <div class="input_field">
+            <label for="name">Full Name</label>
+            <input type="text" class =" input" id="name" name="name" placeholder="Full Name" required minlength="3" maxlength="100">
+          </div>
+          <!-- Phone Number -->
+          <div class="input_field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class =" input" id="phone" name="phone" placeholder="15555555555" required
+              pattern="[1]{1}[0-9]{4}[0-9]{6}">
+          </div>
+          <!-- Email Address -->
+          <div class="input_field">
+            <label for="email">Email Address</label>
+            <input type="email" class =" input" id="email" name="email" placeholder="email@address.com" required>
+          </div>
+          <!--ReType Email Address -->
+          <div class="input_field">
+            <label for="email">ReType Email Address</label>
+            <input type="email" class =" input" id="ReTypeEmail" name="email" placeholder="email@address.com" required>
+          </div>
+          <!---Gender-->
+          <div class="input_field">
+            <label id="gender">Gender</label></li>
+<input type="radio" name="msex" value="Male" class="Gender"/><span>Male</span>
+<input type="radio" name="fsex" value="Female" class="Gender"/><span>Female</span>
+          </div>
+          <!----DOB--> 
+          <div class="input_field">
+          <label for="start">DOB</label>
+
+<input type="date" id="DOB" name="DOB" class="input"
+       value=""
+       min="1970-01-01" max="2020-10-08" required>
+        </div> 
+        <!----Country--> 
+          <div class="input_field">
+            <label for="country">Country</label>
+            <div class="custom_select">
+          <select name="country">
+            <option selected="" value="Default">(Please select a country)</option>
+            <option value="AF">Australia</option>
+            <option value="AL">Canada</option>
+            <option value="DZ">India</option>
+            <option value="AS">Russia</option>
+            <option value="AD">USA</option>
+          </select>
+          </div> 
+        </div>
+          <!----Province--> 
+          <div class="input_field">
+          <label for="Province">State</label>
+          <div class="custom_select">
+        <select name="State">
+          <option selected="" value="Default">(Please select a Province)</option>
+          <option value="AF">ON</option>
+          <option value="AL">AB</option>
+          <option value="DZ">MB</option>
+          <option value="AS">BC</option>
+          <option value="AD">QB</option>
+          </select>
+        </div>
+        </div>
+        <!---submit-->
+        <div class="input_field">
+            <input type="submit" value="Validate" class="btn" onclick="return validate()"/>
+            </div>
+          </div>
+          </form>
+          
+          <!-- Error/Success Message -->
+        </div>
+     </div>     
+     <script src="script.js"></script>
+       
+          </body>
+          </html>
+          
